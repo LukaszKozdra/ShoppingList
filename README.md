@@ -1,4 +1,4 @@
 # Object-oriented Programming Project 
-This is my simple project of terminal shopping list application for Object-oriented Programming.  
+This is my simple project of Terminal Shopping List Application for Object-oriented Programming course.  
 # Author
 Łukasz Kozdra
