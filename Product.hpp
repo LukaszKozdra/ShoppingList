@@ -6,8 +6,8 @@ namespace lk {
 /**
  * \brief Exception thrown when product name is invalid.
  *
- * This exception is thrown when user provides an empty string
- * as a product name. The name is automatically set to "Unknown".
+ * This exception is thrown when user provides an empty string 
+ * or wrong value as a product name. 
  */
 struct ErrWrongName {
     /**
@@ -19,8 +19,8 @@ struct ErrWrongName {
 /**
  * \brief Exception thrown when product amount is invalid.
  *
- * This exception is thrown when user provides an amount
- * lower than 0. The amount is automatically set to 0.
+ * This exception is thrown when user provides an wrong amount.
+ * of product.
  */
 struct ErrWrongAmount {
     /**
@@ -32,8 +32,8 @@ struct ErrWrongAmount {
 /**
  * \brief Exception thrown when product price is invalid.
  *
- * This exception is thrown when user provides a price
- * lower than 0. The price is automatically set to 0.
+ * This exception is thrown when user provides a wrong price
+ * of product.
  */
 struct ErrWrongPrice {
     /**

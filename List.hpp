@@ -23,8 +23,8 @@ struct ErrNoExistingProduct {
 /**
  * \brief Exception thrown when amount of to delete is incorrect.
  *
- * This exception is thrown when user provides amount to delete
- * lower than 0.
+ * This exception is thrown when user provides wrong amount or
+ * wrong value to delete
  */
 struct ErrWrongAmountToDel {
     /**
