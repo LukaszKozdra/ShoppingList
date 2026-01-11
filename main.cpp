@@ -46,7 +46,7 @@ int main(){
 
         chooseOperationI = std::stoi(chooseOperationS);
 
-        if(chooseOperationI < 0 || chooseOperationI > 6){
+        if(chooseOperationI <= 0 || chooseOperationI > 6){
             std::cout << std::endl << "ERORR: Operation number is not form range 1-6 " << std::endl;
             std::cout << "Click enter to try again " << std::endl;
             std::cin.ignore();

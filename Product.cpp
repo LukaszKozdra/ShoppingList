@@ -38,7 +38,7 @@ void Product::setName(std::string n) {
 }
 
 void Product::setAmount(int a) {
-    if(a < 0){
+    if(a <= 0){
         m_amount = 0;
         throw ErrWrongAmount();                 
     }else{
