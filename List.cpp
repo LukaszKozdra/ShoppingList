@@ -19,8 +19,8 @@ void ErrWrongAmountToDel::what() {
 void List::addProduct(const Product &p) {
     for(auto it = list.begin(); it != list.end(); it++){
         if(it->getName() == p.getName()){
-            it->setAmount(it->getAmount() + p.getAmount());
-            it->setPrice(it->getPrice() + p.getPrice());
+            it->setAmount(/*it->getAmount() + */p.getAmount());
+            it->setPrice(/*it->getPrice() +*/ p.getPrice());
             return;
         }           
     }
@@ -43,7 +43,6 @@ void List::delProduct(std::string nameToFind){
     }
 
     if(!productFound){
-        //std::cout << std::endl << "This product doesnt exist in your shopping list !!!" << std::endl;   //dodac obsluge wyjatkow
         throw ErrNoExistingProduct();
         return;       
     }
@@ -51,8 +50,7 @@ void List::delProduct(std::string nameToFind){
 
 void List::delProductNameAmout(std::string nameToFind, int amountToDel){
     if(amountToDel < 0){
-        //std::cout << std::endl << "Amount to delete is lower than 0" << std::endl; 
-        throw ErrWrongAmountToDel();         //dodac obsluge wyjatkow
+        throw ErrWrongAmountToDel();         
         return;               
     }
 
@@ -70,7 +68,6 @@ void List::delProductNameAmout(std::string nameToFind, int amountToDel){
     }
 
     if(!productFound){
-        //std::cout << std::endl << "This product doesnt exist in your shopping list !!!" << std::endl;   //dodac obsluge wyjatkow
         throw ErrNoExistingProduct();
         return;          
     }
@@ -93,9 +90,6 @@ void List::showList() const {
     std::right << std::setw(15) << itList.getAmount() <<  
     std::right << std::setw(15) << itList.getPrice() << std::endl; 
     sum += itList.getPrice() * itList.getAmount();
-        // std::cout << itList.getName() << " Amout: " << itList.getAmount() 
-        // << " Price: "  << itList.getPriceOfAll() << " $\n";
-        // std::cout << std::left << std::setw(20) << "Product name:" << std::right << std::setw(15) << "Amount:" << std::endl; 
     }
     std::cout << std::left << std::setw(20) << "Total: "<< sum << std::endl;
 }

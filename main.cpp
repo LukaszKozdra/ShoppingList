@@ -9,7 +9,7 @@
 void pause_and_clear(std::string str){
     std::cout << str <<  " " << std::endl;
     std::cin.clear();
-    std::cin.ignore();
+    std::cin.ignore(1000, '\n');
     char enter;
     std::cin.get(enter);
     system("clear");
@@ -64,21 +64,18 @@ int main(){
                     std::cin >> ProductName;
                     if(std::cin.fail()){
                         std::cin.clear();
-                        std::cin.ignore();
                         throw lk::ErrWrongName();
                     }
                     std::cout << "Provide amount of product to add: ";
                     std::cin >> ProductAmount;
                     if(std::cin.fail()){
                         std::cin.clear();
-                        std::cin.ignore();
                         throw lk::ErrWrongAmount();
                     }
                     std::cout << "Provide price of single product: ";
                     std::cin >> ProductPrice;
                     if(std::cin.fail()){
                         std::cin.clear();
-                        std::cin.ignore();
                         throw lk::ErrWrongPrice();
                     }
                     list.addProduct(lk::Product(ProductName, ProductAmount, ProductPrice));
@@ -97,7 +94,6 @@ int main(){
                     std::cin >> ProductAmount;
                     if(std::cin.fail()){
                         std::cin.clear();
-                        std::cin.ignore();
                         throw lk::ErrWrongAmountToDel();
                     }
                     list.delProductNameAmout(ProductName, ProductAmount);
